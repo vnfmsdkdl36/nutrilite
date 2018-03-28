@@ -1,0 +1,214 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*공통 CSS*/
+*{
+    margin: 0; padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:100%;
+    line-height:1;
+}
+html,body{
+    width: 100%; height: 100%;
+}
+img{max-width: 100%; border: 0;}
+input, select{vertical-align:middle;}
+label{cursor:pointer;}
+i,em,address{font-style:normal; font-weight:normal;}
+li{list-style: none;}
+a{text-decoration: none;}
+a:focus, button:focus, input:focus { outline: none; }
+.box{
+    max-width: 1280px;
+}
+/******************************공통사항*****************************/
+/*page 전체 layout*/
+#page{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    /* border: 1px solid red; */
+}
+/*header*/
+header > h1{
+  /* border: 1px solid red; */
+  position: absolute;
+  left: 5%; top: 5%;
+  z-index: 1;
+}
+/* 탑메뉴 */
+header > div > ul.topMenu{
+  position: absolute;
+  right: 2%; top: 2%;
+  z-index: 1;
+}
+header > div > ul.topMenu > li{
+  float: left;
+  /* border: 1px solid red; */
+}
+header > div > ul.topMenu a{
+  color: white;
+  padding-left: 10px;
+  font-size: 0.8em;
+}
+/* 네비게이션 부분 */
+header > nav > ul.gnb{
+  position: absolute;
+  z-index: 1;
+  right: 2%; top: 6.5%;
+/*  border: 1px solid red; */
+  width: 65%;
+  height: auto;
+  overflow: hidden;
+}
+header > nav > ul.gnb > li{
+  float: left;
+  text-align: center;
+  margin-right:3%;
+
+}
+header > nav > ul.gnb > li > a{
+  color: white;
+/*  border: 1px solid red;*/
+  text-align: center;
+  font-size: 1.4em;
+  display: block;
+}
+header > nav > ul.gnb > li > ul.lnb {
+/*    border: 1px solid red;*/
+    margin-top: 20px;
+    display: none;
+}
+
+header > nav > ul.gnb > li > ul.lnb >li{
+    padding-bottom: 10px;
+}
+header > nav > ul.gnb > li > ul.lnb >li >a{
+    color: white;
+    font-size: 0.9em;
+}
+/**********************section**********************/
+.main_banner{
+    border: 1px solid red;
+    overflow: hidden!important;
+    /* height: 400px; */
+    /* padding-bottom: 50%; */
+}
+.main_bxslider{
+  width: 100%;
+  border: 5px solid blue;
+  overflow: hidden!important;
+  padding-bottom: 50%;
+}
+section > .main_bxslider >li{
+  width: 100%;
+}
+section > .main_bxslider >li >img{
+  width: 100%;
+    max-width: 100%;
+}
+.text_wrap{
+  color: white;
+}
+
+.bx-wrapper{
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  margin:0 auto;
+}
+/* 이전,다음 화살표지움 */
+.bx-controls-direction{
+  display: none;
+}
+/* 밑버튼 부분 */
+.bx-pager, .bx-default-pager{
+  bottom:20px !important;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+  background: white !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 10px !important;
+  border-radius: 10px !important;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper
+.bx-pager.bx-default-pager a.active, .bx-wrapper
+.bx-pager.bx-default-pager a:focus{
+  background: black !important;
+}
+/******************footer******************/
+footer{
+    width: 100%;
+    background: yellow;
+}
+footer > .f_Top{
+
+}
+/*359px 이하*/
+@media screen(max-width:359px){
+
+}
+/*767px 이하*/
+@media (max-width:767px){
+    #menubtn{
+        padding: 6px 12px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px; right: 15px;
+        display: block;
+        z-index: 1;
+    }
+    #menubtn:hover{
+        background: rgba(61, 111, 61, 0.75);
+    }
+    #menubtn:focus{
+        outline: none;
+    }
+    #menubtn i.fas{
+        font-size: 40px;
+        color: white;
+
+    }
+    #menu li{
+        float: none;
+        display: block;
+    }
+}
+/*휴대폰(599px 이하)*/
+@media screen and (max-width: 599px){
+    /* body{background: yellow;} */
+    nav.menu li a{
+        padding: 10px 7px;
+        font-size: 11px;
+    }
+}
+/*테이블 이상(아이패드 기준)*/
+@media screen and (min-width: 768px){
+   .header:after{
+		content: "";
+		display: block;
+		clear: both;
+    }
+    /*토글버튼*/
+    #menubtn{
+        display: none;
+    }
+    #menu{
+        display: block !important;
+    }
+}
+/*대화면 -pc화면- */
+@media screen and (min-width: 1024px){
+    /* body{background: pink;} */
+
+}
